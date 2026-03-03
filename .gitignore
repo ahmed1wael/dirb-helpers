@@ -1,10 +1,19 @@
+# --- Rust ---
 /target/
 **/*.rs.bk
-Cargo.lock
+# Cargo.lock: Commit for apps, ignore for libraries
+# Cargo.lock
 
-/output/
-*.json
-*.txt
+# --- Output Files (Security & Privacy) ---
+/output/*.json
+/output/*.txt
+!examples/sample_output.json  # Allow test samples if needed
 
+# --- Environment & IDE ---
 .env
 .DS_Store
+.vscode/
+.idea/
+
+# --- OS ---
+Thumbs.db

@@ -1,0 +1,45 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Dirb Helper Normalized Output",
+  "description": "Structured output schema for dirb-helper - part of Arsenal Security Framework",
+  "type": "object",
+  "properties": {
+    "meta": {
+      "type": "object",
+      "properties": {
+        "tool": { "type": "string", "example": "dirb-helper" },
+        "version": { "type": "string", "example": "0.1.0" },
+        "timestamp": { "type": "string", "format": "date-time" },
+        "target": { "type": "string", "format": "uri" }
+      },
+      "required": ["tool", "version", "timestamp", "target"]
+    },
+    "summary": {
+      "type": "object",
+      "properties": {
+        "total_paths": { "type": "integer" },
+        "critical": { "type": "integer" },
+        "interesting": { "type": "integer" },
+        "noise": { "type": "integer" }
+      },
+      "required": ["total_paths", "critical", "interesting", "noise"]
+    },
+    "results": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "path": { "type": "string" },
+          "full_url": { "type": "string", "format": "uri" },
+          "status_code": { "type": "integer", "minimum": 100, "maximum": 599 },
+          "size": { "type": "integer", "minimum": 0 },
+          "priority": { "type": "string", "enum": ["high", "medium", "low"] },
+          "risk_level": { "type": "string", "enum": ["critical", "interesting", "noise", "redirect", "rate_limited"] },
+          "raw_line": { "type": "string" }
+        },
+        "required": ["path", "full_url", "status_code", "size", "priority", "risk_level", "raw_line"]
+      }
+    }
+  },
+  "required": ["meta", "summary", "results"]
+}

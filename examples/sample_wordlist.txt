@@ -1,0 +1,184 @@
+# dirb-helper Sample Wordlist
+# Use this as a starting point for targeted scanning
+# Format: One path per line
+
+# Admin Panels
+/admin
+/admin/
+/admin/login
+/admin/dashboard
+/adminpanel
+/admincp
+/controlpanel
+/cpanel
+/manager
+/backend
+/manage
+/dashboard
+/sysadmin
+/moderator
+/staff
+/wp-admin
+/wp-login.php
+/phpmyadmin
+/pma
+/mysql
+/dbadmin
+
+# Common Files
+/config.php
+/config.inc.php
+/configuration.php
+/database.yml
+/settings.py
+/.env
+/.git/config
+/backup.sql
+/backup.zip
+/db.sql
+
+# API Endpoints
+/api
+/api/v1
+/api/v2
+/graphql
+/rest
+/swagger
+/api/v3
+/graphql
+/rest
+/swagger
+/swagger-ui
+/openapi.json
+/docs
+/redoc
+
+# Sensitive Paths
+/.bash_history
+/.ssh/id_rsa
+/.htpasswd
+/robots.txt
+/sitemap.xml
+
+# Test Paths (Low Risk)
+/test
+/tests
+/temp
+/tmp
+/dev
+/development
+/staging
+/stage
+/beta
+/old
+/v1
+/v2
+/new
+
+# Authentication & User Access
+/login
+/logout
+/signin
+/signup
+/register
+/user
+/users
+/profile
+/account
+/auth
+/oauth
+/sso
+/session
+/password
+/reset
+/forgot-password
+
+# Configuration & Environment Files
+/.env
+/.env.local
+/.env.production
+/.env.dev
+/config.php
+/config.inc.php
+/config.json
+/config.yml
+/config.yaml
+/configuration.php
+/settings.py
+/settings.json
+/application.properties
+/web.config
+/appsettings.json
+/database.yml
+
+# Source Code & Repository Exposure
+/.git/
+/.git/config
+/.gitignore
+/.svn/
+/.hg/
+/composer.json
+/package.json
+/package-lock.json
+/yarn.lock
+/Dockerfile
+/docker-compose.yml
+/Makefile
+
+# Backups & Old Versions
+/backup
+/backups
+/backup.sql
+/backup.zip
+/db.sql
+/database.sql
+/site.bak
+/site.old
+/index.php.bak
+/index.php~
+/config.php.bak
+/config.old
+/archive.zip
+/dump.sql
+
+# Cloud & DevOps Exposure
+/server-status
+/server-info
+/.dockerenv
+/kibana
+/jenkins
+/ci
+/cd
+/.aws
+/.azure
+/.gcloud
+
+# Upload & File Handling
+/uploads
+/upload
+/files
+/file
+/attachments
+/media
+/images
+/download
+/export
+/import
+
+# Info Disclosure
+/robots.txt
+/sitemap.xml
+/phpinfo.php
+/info.php
+/status
+/health
+/version
+/changelog
+/readme.txt
+/README.md
+/LICENSE
+
+# 
+
+# Extensions to Combine (use with -X flag)
+# .php .asp .aspx .jsp .html .json .xml .bak .old .backup
